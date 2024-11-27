@@ -1,0 +1,70 @@
+/* style.css */
+body {
+    margin: 0;
+    overflow: hidden;
+    background: url('background.png') no-repeat center center;
+  }
+  
+  .ocean {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  @keyframes randomMovement {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    20% {
+      transform: translate(200px, -50px) rotate(15deg); /* Đẩy cá ra giữa hơn */
+    }
+    40% {
+      transform: translate(300px, 50px) rotate(-10deg); /* Dịch chuyển gần trung tâm */
+    }
+    60% {
+      transform: translate(200px, -30px) rotate(20deg); /* Dịch chuyển ngang qua trung tâm */
+    }
+    80% {
+      transform: translate(250px, 30px) rotate(-10deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+  
+/* Cá */
+.fish {
+    position: absolute;
+    width: 150px; /* Tăng kích thước cá lớn hơn */
+    animation: randomMovement 10s infinite;
+  }
+  
+  /* Cá thứ nhất */
+  .fish1 {
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    top: 30%; 
+    left: 10%;
+    width: 200px; /* Cá lớn nhất */
+  }
+  
+  /* Cá thứ hai */
+  .fish2 {
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    top: 45%;
+    left: 5%;
+    width: 180px; /* Cá lớn vừa */
+  }
+  
+  /* Cá thứ ba */
+  .fish3 {
+    animation-duration: 15s;
+    animation-timing-function: ease-in-out;
+    top: 60%;
+    left: 15%;
+    width: 160px; /* Cá nhỏ hơn */
+  }
+  
+  
